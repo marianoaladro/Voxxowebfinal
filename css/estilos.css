@@ -7538,7 +7538,41 @@ a {
 .footer {
   margin: 0; }
 
-/********************************CLASS**********************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #797878;
+  color: white;
+  font-family: 'Rubik', sans-serif; }
+
+header {
+  padding: 5px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+nav ul {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  list-style: none; }
+
+li {
+  padding: 10px; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+.footer {
+  margin: 0; }
+
 .logoVoxxo {
   width: 200px; }
 
@@ -7548,31 +7582,15 @@ a {
 .linkNav {
   font-size: 2rem; }
 
-/*Pagina Manifesto*/
-.manifesto-contenedor {
-  margin: 10px;
-  display: grid;
-  grid-template-columns: none;
-  grid-gap: 10px;
-  grid-template-areas: "foto texto"; }
-
-.manifesto-Imagen {
-  display: flex;
-  grid-area: foto; }
-
-.manifesto-Texto {
-  grid-area: texto;
-  padding: 10px;
-  border-color: #aaaaaa;
-  border-width: 1px;
-  border-style: solid; }
+/*Imagenes del carrusel*/
+.slide {
+  margin: 30px;
+  align-items: center; }
 
 /*aca vienen los grids para la pagina de render*/
 .render-container {
   display: grid;
-  grid-template-areas: "img6       img6       img3"
- "img4       img4       img5"
- "img1       img2       img7";
+  grid-template-areas: "img6       img6       img3" "img4       img4       img5" "img1       img2       img7";
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
@@ -7608,23 +7626,30 @@ a {
   width: 100%;
   height: 100%; }
 
-/*Imagenes del carrusel*/
-.slide {
-  margin: 30px;
-  align-items: center; }
+/*Pagina Manifesto*/
+.manifesto-contenedor {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: none;
+  grid-gap: 10px;
+  grid-template-areas: "foto texto"; }
+
+.manifesto-Imagen {
+  display: flex;
+  grid-area: foto; }
+
+.manifesto-Texto {
+  grid-area: texto;
+  padding: 10px;
+  border-color: #aaaaaa;
+  border-width: 1px;
+  border-style: solid; }
 
 /*media queries*/
 @media screen and (max-width: 700px) {
   .render-container {
     display: grid;
-    grid-template-areas: "img1"
- "img2"
- "img3"
- "img4"
- "img4"
- "img5"
- "img6"
- "img7";
+    grid-template-areas: "img1" "img2" "img3" "img4" "img4" "img5" "img6" "img7";
     grid-template-rows: repeat(7, 1fr);
     grid-template-columns: 100%;
     grid-row-gap: 10px; } }

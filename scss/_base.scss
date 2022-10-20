@@ -1,0 +1,39 @@
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #797878;
+    color: white ;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+header{
+    padding: 5px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+nav  {
+    ul {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+        list-style: none;
+    } 
+}
+li {
+    padding: 10px;
+}
+a { color: white; text-decoration: none; }
+
+.footer{
+    margin: 0;
+}
