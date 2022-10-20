@@ -52,9 +52,9 @@
 .manifesto-contenedor{
     margin: 10px;
     display: grid;
-    grid-template-columns: none ;
+    grid-template-columns: repeat(3, 1fr) ;
     grid-gap: 10px;
-    grid-template-areas: "foto texto" ;
+    grid-template-areas: "foto texto texto" ;
 }
 .manifesto-Imagen{
     display: flex;
@@ -85,6 +85,14 @@
         "img7";
         grid-template-rows: repeat(7, 1fr);
         grid-template-columns: 100%;
+        grid-row-gap: 10px;
+    }
+    .manifesto-contenedor{
+        display: grid;
+        grid-template-areas:
+        "foto"
+        "texto";
+        grid-template-columns:repeat(2, 1fr) ;
         grid-row-gap: 10px;
     }
 }

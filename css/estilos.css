@@ -7538,41 +7538,6 @@ a {
 .footer {
   margin: 0; }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-body {
-  background-color: #797878;
-  color: white;
-  font-family: 'Rubik', sans-serif; }
-
-header {
-  padding: 5px;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; }
-
-nav ul {
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  font-size: 30px;
-  list-style: none; }
-
-li {
-  padding: 10px; }
-
-a {
-  color: white;
-  text-decoration: none; }
-
-.footer {
-  margin: 0; }
-
 .logoVoxxo {
   width: 200px; }
 
@@ -7630,9 +7595,9 @@ a {
 .manifesto-contenedor {
   margin: 10px;
   display: grid;
-  grid-template-columns: none;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
-  grid-template-areas: "foto texto"; }
+  grid-template-areas: "foto texto texto"; }
 
 .manifesto-Imagen {
   display: flex;
@@ -7652,6 +7617,11 @@ a {
     grid-template-areas: "img1" "img2" "img3" "img4" "img4" "img5" "img6" "img7";
     grid-template-rows: repeat(7, 1fr);
     grid-template-columns: 100%;
+    grid-row-gap: 10px; }
+  .manifesto-contenedor {
+    display: grid;
+    grid-template-areas: "foto" "texto";
+    grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 10px; } }
 
 @media screen and (max-width: 600px) {
