@@ -7,9 +7,10 @@
     "img4       img4       img5"
     "img1       img2       img7";
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    @include grid(repeat(3, 1fr), ($standard*2) );
+    
+    grid-column-gap: $standard*2;
+
     
 
 
@@ -51,10 +52,10 @@
 
 /*Pagina Manifesto*/
 .manifesto-contenedor{
-    margin: 10px;
+    margin: $standard;
     display: grid;
     grid-template-columns: repeat(3, 1fr) ;
-    grid-gap: 10px;
+    grid-gap: $standard;
     grid-template-areas: "foto texto texto" ;
 
 .manifiesto-img-contenedor{
@@ -64,8 +65,7 @@ flex-direction: column;
 }
 
 .manifesto-Imagen{
-    display: flex;
-    align-items: center;
+    @extend .manifiesto-img-contenedor;
     grid-area: foto;
     width: 300px;
     margin: 100px;
@@ -74,7 +74,7 @@ flex-direction: column;
 
 .manifesto-Texto{
     grid-area: texto;
-    padding:  10px;
+    padding:  $standard;
     border-color: #aaaaaa;
     border-width: 1px;
     border-style: solid;
@@ -85,7 +85,7 @@ h3{
 }
 
 /*media queries*/
-@media screen and (max-width:700px){
+@media screen and (max-width:900px){
     .render-container{
         display: grid;
         grid-template-areas: 
@@ -98,17 +98,16 @@ h3{
         "img6"
         "img7";
         grid-template-rows: repeat(7, 1fr);
-        grid-template-columns: 100%;
-        grid-row-gap: 10px;
+        @include grid(100%,$standard );
     }
     .manifesto-contenedor{
         display: grid;
         grid-template-areas:
         "foto"
         "texto";
-        grid-template-columns:repeat(2, 1fr) ;
+       
         grid-template-columns: 100%;
-        grid-row-gap: 10px;
+        grid-row-gap: $standard;
     }
 }
 
