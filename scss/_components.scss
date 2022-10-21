@@ -26,13 +26,13 @@ nav  {
     display: flex;
     flex-direction: row;
     font-size: 30px;
-        list-style: none;
+        list-style: none
     } 
-}
 li {
     padding: 10px;
 }
 a { color: white; text-decoration: none; }
+}
 
 .footer{
     margin: 0;
@@ -44,9 +44,7 @@ a { color: white; text-decoration: none; }
 }
 
 .main_image{
-width:100%;
-
-
+width:100%
 }
 .linkNav{
     font-size: 2rem;
@@ -57,3 +55,4 @@ width:100%;
     margin: 30px;
     align-items: center;
 }
+

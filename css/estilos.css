@@ -7528,10 +7528,10 @@ nav ul {
   font-size: 30px;
   list-style: none; }
 
-li {
+nav li {
   padding: 10px; }
 
-a {
+nav a {
   color: white;
   text-decoration: none; }
 
@@ -7560,31 +7560,23 @@ a {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px; }
-
-.img1 {
-  grid-area: img1; }
-
-.img2 {
-  grid-area: img2; }
-
-.img3 {
-  grid-area: img3; }
-
-.img4 {
-  grid-area: img4; }
-
-.img5 {
-  grid-area: img5; }
-
-.img6 {
-  grid-area: img6; }
-
-.img7 {
-  grid-area: img7; }
-
-.render__imagen {
-  display: flex;
-  background-color: green; }
+  .render-container .img1 {
+    grid-area: img1; }
+  .render-container .img2 {
+    grid-area: img2; }
+  .render-container .img3 {
+    grid-area: img3; }
+  .render-container .img4 {
+    grid-area: img4; }
+  .render-container .img5 {
+    grid-area: img5; }
+  .render-container .img6 {
+    grid-area: img6; }
+  .render-container .img7 {
+    grid-area: img7; }
+  .render-container .render__imagen {
+    display: flex;
+    background-color: green; }
 
 /*Tamaño de la imagenes*/
 .Imagen {
@@ -7598,17 +7590,24 @@ a {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-template-areas: "foto texto texto"; }
-
-.manifesto-Imagen {
-  display: flex;
-  grid-area: foto; }
-
-.manifesto-Texto {
-  grid-area: texto;
-  padding: 10px;
-  border-color: #aaaaaa;
-  border-width: 1px;
-  border-style: solid; }
+  .manifesto-contenedor .manifiesto-img-contenedor {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+  .manifesto-contenedor .manifesto-Imagen {
+    display: flex;
+    align-items: center;
+    grid-area: foto;
+    width: 300px;
+    margin: 100px; }
+  .manifesto-contenedor .manifesto-Texto {
+    grid-area: texto;
+    padding: 10px;
+    border-color: #aaaaaa;
+    border-width: 1px;
+    border-style: solid; }
+  .manifesto-contenedor h3, .manifesto-contenedor .h3 {
+    text-align: center; }
 
 /*media queries*/
 @media screen and (max-width: 700px) {
@@ -7622,6 +7621,7 @@ a {
     display: grid;
     grid-template-areas: "foto" "texto";
     grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 100%;
     grid-row-gap: 10px; } }
 
 @media screen and (max-width: 600px) {
