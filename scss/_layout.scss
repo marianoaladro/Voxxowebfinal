@@ -67,8 +67,8 @@ flex-direction: column;
 .manifesto-Imagen{
     @extend .manifiesto-img-contenedor;
     grid-area: foto;
-    width: 300px;
-    margin: 100px;
+    width: ($standard*30);
+    margin: ($standard*10);
 
 }
 
